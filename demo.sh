@@ -5,7 +5,7 @@ source scripts/helpers.bash
 desc_rate "A long time ago, in a container cluster far, far away...."
 desc_rate ""
 desc_rate "It is a period of civil war. The Empire has adopted"
-desc_rate "microservices and continuous delivery, despite this,"
+desc_rate "microservices and continuous delivery. Despite this,"
 desc_rate "Rebel spaceships, striking from a hidden cluster, have"
 desc_rate "won their first victory against the evil Galactic Empire."
 desc_rate ""
@@ -29,7 +29,7 @@ run "watch -n 1 kubectl get pod,svc,ciliumnetworkpolicies"
 xwing_pod=$(get_xwing_pod)
 deathstar_name=deathstar.default.svc.cluster.local
 
-desc_rate "To all X-Wings: Execute REST API call to main API endpoint"
+desc_rate "To all X-Wings: Execute REST API call to the main API endpoint!"
 run "kubectl exec -ti ${xwing_pod} -- curl -XGET ${deathstar_name}/v1"
 
 desc_rate "Starting API scanner"
@@ -54,7 +54,7 @@ desc_rate "----------------------------------------"
 desc_rate "The alliance returns..."
 run ""
 
-desc_rate "Calling alliance fleet: Attack deathstar!"
+desc_rate "Calling alliance fleet: Attack the deathstar!"
 run "kubectl exec -ti ${xwing_pod} -- curl -s -XPUT ${deathstar_name}/v1/exhaust-port"
 
 desc_rate "Oh no! It's a trap..."
