@@ -9,7 +9,10 @@ spec:
       class: deathstar
       org: empire
   ingress:
-  - toPorts:
+  - fromEndpoints:
+    - matchLabels:
+      class: spaceship
+    toPorts:
     - ports:
       - port: "80"
         protocol: TCP

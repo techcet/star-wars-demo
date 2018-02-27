@@ -18,7 +18,7 @@ run "kubectl -n kube-system get pods"
 desc_rate "The empire starts deploying a deathstar..."
 run "cat diagram.txt"
 run "kubectl apply -f 02-deathstar.yaml"
-run "kubectl create -f policy/l4_policy.yaml"
+run "kubectl create -f policy/l3l4_policy.yaml"
 run "watch -n 1 kubectl get pod,svc,ciliumnetworkpolicies"
 
 desc_rate "Wow, what's that? The alliance sends out some X-Wings to check it out"
